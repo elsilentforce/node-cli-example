@@ -12,6 +12,13 @@ const argv = require('yargs')
     default: false,
     desc: 'List the operation in command line'
   })
+  .options('i', {
+    alias: 'iterations',
+    type: 'number',
+    demandOption: false,
+    default: 10,
+    desc: 'Number of iterations to generate the table.'
+  })
   .check( (argv, options) => {
     if( isNaN(argv.base) ){
       throw 'Base must be a number'

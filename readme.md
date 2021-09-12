@@ -14,6 +14,7 @@ you will get the output file under the `results` directory
 --version
 -b, --base
 -l, --list
+-i, --iterations
 ```
 
 

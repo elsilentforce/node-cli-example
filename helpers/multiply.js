@@ -1,8 +1,8 @@
 fs = require('fs');
 
-const createTableFile = async (base, displayList) => {
+const createTableFile = async (base, displayList, iterations) => {
   try{
-    const fileName = `${ base }-table.txt`;
+    const fileName = `results/${ base }-table.txt`;
     let output = ''
     
     // File headers
@@ -10,7 +10,7 @@ const createTableFile = async (base, displayList) => {
     output += (`${ base } Table\n`);
     output += ('===============\n');
     
-    for(i = 1; i <= 10; i++){
+    for(i = 1; i <= iterations; i++){
       output += `${ base } X ${ i } = ${ base * i }\n`
     }
     
